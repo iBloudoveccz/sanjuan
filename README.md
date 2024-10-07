@@ -1,4 +1,4 @@
-# Music-bot
+# sanjuan bot de musica
 
 A complete code to download for a music bot 🎧
 
