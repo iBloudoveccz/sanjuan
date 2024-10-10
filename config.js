@@ -1,23 +1,13 @@
 module.exports = {
     app: {
         token: process.env.DISCORD_TOKEN || '',
-        playing: 'by the Community ❤️',
+        playing: '/play',
         global: false,
         guild: process.env.GUILD_ID || '',
         extraMessages: false,
         loopMessage: false,
         lang: 'en',
         enableEmojis: false,
-    },
-
-    emojis:{
-        'back': '⏪',
-        'skip': '⏩',
-        'ResumePause': '⏯️',
-        'savetrack': '💾',
-        'volumeUp': '🔊',
-        'volumeDown': '🔉',
-        'loop': '🔁',
     },
 
     opt: {
@@ -31,9 +21,9 @@ module.exports = {
         spotifyBridge: true,
         volume: 75,
         leaveOnEmpty: true,
-        leaveOnEmptyCooldown: 30000,
+        leaveOnEmptyCooldown: 3600000,
         leaveOnEnd: true,
-        leaveOnEndCooldown: 30000,
+        leaveOnEndCooldown: 3600000,
         discordPlayer: {
             ytdlOptions: {
                 quality: 'highestaudio',

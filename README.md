@@ -1,18 +1,12 @@
 # Music-bot
 
-A complete code to download for a music bot 🎧
+Codigo en desarrollo para un bot de musica
 
-Looking for a code for a music bot? This fully open-source code is made for your project!
+### Configuration
 
-If you need help with this project, to get support faster you can join the help server by just clicking [here](https://discord.gg/5cGSYV8ZZj).
+¡¡¡Importante!!! Para que funcione, debes poner tu token respectivo en `.env`
 
-*If you don't have any development knowledge, it is recommended to join the Discord support server to get help.*
-
-### ⚡ Configuration
-
-Important!!! In order to work you need to rename `.env.example` to `.env`
-
-Open the configuration file located in the main folder `config.js`.
+Abra el archivo de configuración ubicado en la carpeta principal `config.js`.
 
 ```js
 const process = require('process');
@@ -20,22 +14,12 @@ module.exports = {
     app: {
         token: process.env.DISCORD_TOKEN || 'xxx',
         playing: '/play',
-        global: true,
+        global: false,
         guild: process.env.GUILD_ID || 'xxx',
         extraMessages: false,
         loopMessage: false,
         lang: 'en',
         enableEmojis: false,
-    },
-
-    emojis:{
-        'back': '⏪',
-        'skip': '⏩',
-        'ResumePause': '⏯️',
-        'savetrack': '💾',
-        'volumeUp': '🔊',
-        'volumeDown': '🔉',
-        'loop': '🔁',
     },
 
     opt: {
@@ -62,12 +46,12 @@ module.exports = {
 };
 ```
 
-Basic configuration
+Configuración básica
 
-- `app/token`, the token of the bot available on the [Discord Developers](https://discordapp.com/developers/applications) section
-- `app/playing`, the activity of the bot
-- `app/global`, whether the commands will work on all servers or just one (if global they might take up to an hour to show up)
-- `app/guild`, the guild the slash command will be loaded to (this only applies if global is set to false)
+- `app/token`, el token del bot disponible en la sección [Discord Developers](https://discordapp.com/developers/applications)
+- `app/playing`, la actividad del bot
+- `app/global`, si los comandos funcionarán en todos los servidores o solo en uno (si son globales, pueden tardar hasta una hora en aparecer)
+- `app/guild`, el gremio en el que se cargará el comando de barra (esto solo se aplica si global está configurado como falso)
 - `app/extraMessages` will increase the amount of bot spam, while you get more infomation (not recommended) 
 
 - `app/lang` will change the bot client language [__**See below for supported language codes**__]

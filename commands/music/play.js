@@ -1,6 +1,5 @@
 const { QueryType, useMainPlayer } = require('discord-player');
 const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js');
-const { Translate } = require('../../process_tools');
 
 module.exports = {
     name: 'play',
@@ -27,7 +26,7 @@ module.exports = {
         let defaultEmbed = new EmbedBuilder().setColor('#2f3136');
 
         if (!res?.tracks.length) {
-            defaultEmbed.setAuthor({ name: await Translate(`No results found... try again ? <❌>`) });
+            defaultEmbed.setAuthor({ name: `No se enconro la cancion`});
             return inter.editReply({ embeds: [defaultEmbed] });
         }
 
@@ -45,11 +44,11 @@ module.exports = {
                 }
             });
 
-            defaultEmbed.setAuthor({ name: await Translate(`Loading <${track.title}> to the queue... <✅>`) });
+            defaultEmbed.setAuthor({ name: `Añadiendo <${track.title}>` });
             await inter.editReply({ embeds: [defaultEmbed] });
         } catch (error) {
             console.log(`Play error: ${error}`);
-            defaultEmbed.setAuthor({ name: await Translate(`I can't join the voice channel... try again ? <❌>`) });
+            defaultEmbed.setAuthor({ name: `No se pudo unir la canal de voz` });
             return inter.editReply({ embeds: [defaultEmbed] });
         }
     }

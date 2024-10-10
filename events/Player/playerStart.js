@@ -15,7 +15,7 @@ module.exports = (queue, track) => {
     const embed = new EmbedBuilder()
       .setAuthor({
         name: await Translate(
-          `Started playing <${track.title}> in <${queue.channel.name}> <🎧>`
+          `<${track.title}>`
         ),
         iconURL: track.thumbnail,
       })
@@ -32,26 +32,15 @@ module.exports = (queue, track) => {
       .setStyle('Primary');
 
     const resumepause = new ButtonBuilder()
-      .setLabel(EmojiState ? emojis.ResumePause : ('Resume & Pause'))
+      .setLabel(EmojiState ? emojis.ResumePause : ('Pause'))
       .setCustomId('resume&pause')
       .setStyle('Danger');
 
-    const loop = new ButtonBuilder()
-      .setLabel(EmojiState ? emojis.loop : ('Loop'))
-      .setCustomId('loop')
-      .setStyle('Danger');
-
-    const lyrics = new ButtonBuilder()
-      .setLabel(await Translate("Lyrics"))
-      .setCustomId("lyrics")
-      .setStyle("Secondary");
-
+    
     const row1 = new ActionRowBuilder().addComponents(
       back,
-      loop,
       resumepause,
-      skip,
-      lyrics
+      skip
     );
     queue.metadata.channel.send({ embeds: [embed], components: [row1] });
   })();
