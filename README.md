@@ -1,4 +1,4 @@
-# Music-bot
+# sanjuan bot de musica
 
 Codigo en desarrollo para un bot de musica
 
