@@ -19,7 +19,7 @@ const process = require('process');
 module.exports = {
     app: {
         token: process.env.DISCORD_TOKEN || 'xxx',
-        playing: 'by the Community ❤️',
+        playing: '/play',
         global: true,
         guild: process.env.GUILD_ID || 'xxx',
         extraMessages: false,
@@ -113,46 +113,3 @@ Now in your terminal run the following commands assuming you are in the same dir
 `yarn install` (or `npm install` **not recommended** as it might not work)
 
 `node .` (or `node main.js`)
-
-and Done, your bot should be running!
-
-Realized with ❤️ by the Community.
-
-Please do not withdraw the license and keep the credits on this project. 
-
-To have full access to the project and to be able to withdraw the credits a small donation is accepted.
-
-### ❗supported languages: 
-
-| Code | Language | Code | Language | Code | Language |
-| ---- | -------- | ---- | -------- | ---- | -------- |
-| `af` | Afrikaans | `bn` | Bengali | `da` | Danish |
-| `sq` | Albanian | `bg` | Bulgarian | `nl` | Dutch |
-| `ar` | Arabic | `ca` | Catalan | `en` | English |
-| `hy` | Armenian | `hr` | Croatian | `et` | Estonian |
-| `eu` | Basque | `cs` | Czech | `fi` | Finnish |
-| `be` | Belarusian | `cy` | Welsh | `fr` | French |
-| `bs` | Bosnian | `de` | German | `ga` | Irish |
-| `ja` | Japanese | `jv` | Javanese | `ka` | Georgian |
-| `kn` | Kannada | `kk` | Kazakh | `km` | Khmer |
-| `ko` | Korean | `ku` | Kurdish | `ky` | Kyrgyz |
-| `la` | Latin | `lb` | Luxembourgish | `lo` | Lao |
-| `lt` | Lithuanian | `lv` | Latvian | `mg` | Malagasy |
-| `mi` | Maori | `mk` | Macedonian | `ml` | Malayalam |
-| `mn` | Mongolian | `mr` | Marathi | `ms` | Malay |
-| `mt` | Maltese | `my` | Burmese | `ne` | Nepali |
-| `no` | Norwegian | `ny` | Chichewa | `pa` | Punjabi |
-| `pl` | Polish | `ps` | Pashto | `pt` | Portuguese |
-| `ro` | Romanian | `ru` | Russian | `sd` | Sindhi |
-| `si` | Sinhalese | `sk` | Slovak | `sl` | Slovenian |
-| `sm` | Samoan | `sn` | Shona | `so` | Somali |
-| `sq` | Albanian | `sr` | Serbian | `st` | Sesotho |
-| `su` | Sundanese | `sv` | Swedish | `sw` | Swahili |
-| `ta` | Tamil | `te` | Telugu | `th` | Thai |
-| `tr` | Turkish | `uk` | Ukrainian | `ur` | Urdu |
-| `vi` | Vietnamese | `xh` | Xhosa | `yi` | Yiddish |
-| `zu` | Zulu | `id` | Indonesian | | |
-
-### 📝 ToDo 
-
--  [ ] Vote to skip command https://github.com/ZerioDev/Music-bot/issues/187
